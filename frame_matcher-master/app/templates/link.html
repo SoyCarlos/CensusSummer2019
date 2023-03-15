@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<header>
+    <h1>Frame Matcher</h1>
+</header>
+
+<body>
+    <div class="choose_columns">
+        <table>
+            <tr>
+                <th>Main Frame</th>
+                <th>Pair</th>
+                <th>Secondary Frame</th>
+            </tr>
+            <form name="reference_cols" action='/home2' method='post'>
+                <tr>
+                    <td>
+                        <select name="main_1">
+                            {% for column_1 in columns[0] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>First Pair</td>
+                    <td>
+                        <select name="secondary_1">
+                            {% for column_1 in columns[1] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="main_2">
+                            {% for column_1 in columns[0] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Second Pair</td>
+                    <td>
+                        <select name="secondary_2">
+                            {% for column_1 in columns[2] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="main_3">
+                            {% for column_1 in columns[0] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Third Pair</td>
+                    <td>
+                        <select name="secondary_3">
+                            {% for column_1 in columns[3] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <div class="submit">
+                    <button>Merge Files on Reference IDs and Go to Next Page</button>
+                </div>
+            </form>
+
+        </table>
+
+    </div>
+
+
+    <div class="shutdown">
+        <form method="post" action="/shutdown">
+            <button>End Program</button>
+        </form>
+    </div>
+</body>
+
+</html>

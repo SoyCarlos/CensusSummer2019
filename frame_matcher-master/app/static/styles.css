@@ -1,0 +1,269 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    color: black;
+}
+
+header {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.upload_menu {
+    width: 100%;
+}
+
+.display_columns {
+    width: 100%;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.first_file {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+.first_file input {
+    border: 2px solid #205493;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.first_file input:hover {
+    background-color: #205493;
+    color: white;
+}
+
+.second_file {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+.second_file input {
+    border: 2px solid #205493;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.second_file input:hover {
+    background-color: #205493;
+    color: white;
+}
+
+.third_file {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+.third_file input {
+    border: 2px solid #205493;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.third_file input:hover {
+    background-color: #205493;
+    color: white;
+}
+
+.fourth_file {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+.fourth_file input {
+    border: 2px solid #205493;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+.fourth_file input:hover {
+    background-color: #205493;
+    color: white;
+}
+
+.submit {
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.submit button {
+    border: 1px solid #009964;
+    color: black;
+    margin: 2em;
+    padding: 1em;
+    transition-duration: 0.4s;
+}
+
+.submit button:hover {
+    color: white;
+    background-color: #009964;
+}
+
+.keep {
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.keep button {
+    border: 1px solid #009964;
+    color: black;
+    margin: 2em;
+    padding: 1em;
+    transition-duration: 0.4s;
+}
+
+.keep button:hover {
+    color: white;
+    background-color: #009964;
+}
+
+.shutdown {
+    width: 100%;
+    text-align: center;
+}
+
+.download {
+    width: 100%;
+    text-align: center;
+}
+
+.download button {
+    border: 1px solid #009964;
+    color: black;
+    margin: 2em;
+    padding: 1em;
+    transition-duration: 0.4s;
+}
+
+.download button:hover {
+    color: white;
+    background-color: #009964;
+}
+
+.shutdown button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 2em;
+    color: black;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    border: 5px solid #9B2743;
+}
+
+.shutdown button:hover {
+    color: white;
+    background-color: #9B2743;
+}
+
+.prelink {
+    width: 100%;
+    text-align: center;
+}
+
+.prelink button {
+    padding: 1em;
+    color: black;
+}
+
+.prelink button {
+    border: 1px solid #009964;
+    color: black;
+    margin: 2em;
+    padding: 1em;
+    transition-duration: 0.4s;
+}
+
+.prelink button:hover {
+    color: white;
+    background-color: #009964;
+}
+
+table {
+    width: 70%;
+    border: 1px solid black;
+}
+
+.left_table {
+    width: 40%;
+    float: left;
+    border: 1px solid black;
+}
+
+.left_table th, tr {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.right_table {
+    width: 40%;
+    float: right;
+    border: 1px solid black;
+}
+
+.right_table th, tr {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.choose_columns {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.choose_columns table {
+    border: none;
+    width: 100%;
+}
+
+.choose_columns td, tr {
+    border-bottom: 1px solid black;
+}
+
+.results_ {
+    width: 100%;
+    text-align: center;
+}
+
+.results_ select{
+    height: 60%;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<header>
+    <h1>Frame Matcher</h1>
+</header>
+
+<body>
+    <div class="upload_menu">
+        <form method="post" enctype=multipart/form-data action="/link">
+            <div class="first_file">
+                <label for="file">Main File (Required)</label>
+                <input type="file" id="file" name="file" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="second_file">
+                <label for="file2">File 2 (Required)</label>
+                <input type="file" id="file2" name="file2" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="third_file">
+                <label for="file3">File 3 (Optional)</label>
+                <input type="file" id="file3" name="file3" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="fourth_file">
+                <label for="file4">File 4 (Optional)</label>
+                <input type="file" id="file4" name="file4" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="submit">
+                <button>Read Files and Redirect to Next Page</button>
+            </div>
+        </form>
+        <div class="shutdown">
+            <form method="post" action="/shutdown" class="shutdown">
+                <button>End Program</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

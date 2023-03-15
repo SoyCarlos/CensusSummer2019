@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<header>
+    <h1>Frame Matcher</h1>
+</header>
+
+<body>
+    <div class="upload_menu">
+        <form method="post" enctype=multipart/form-data action="/uploader">
+            <div class="first_file">
+                <label for="file">Frame 1 (Required)</label>
+                <input type="file" id="file" name="file" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="second_file">
+                <label for="file2">Frame 2 (Required)</label>
+                <input type="file" id="file2" name="file2" accept=".csv , .xlsx, .txt">
+            </div>
+            <div class="submit">
+                <button>Option 1 (If you have 2 Frames with each having their own file): Click to go to Column Matching Page</button>
+            </div>
+        </form>
+        <div class="prelink">
+            <form method="post" action="/prelink" class="prelink">
+                <button>Option 2 (If Frame 1 is split in multiple files): Link multiple files with Reference IDs for Frame 1</button>
+            </form>
+        </div>
+        <div class="shutdown">
+            <form method="post" action="/shutdown" class="shutdown">
+                <button>End Program</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

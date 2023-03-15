@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<header>
+    <h1>Frame Matcher</h1>
+</header>
+
+<body>
+    <div class="choose_columns">
+        <table>
+            <tr>
+                <th>Frame 1</th>
+                <th>Pair</th>
+                <th>Frame 2</th>
+                <th>Data Type</th>
+            </tr>
+            <form name="matched_columns" action='/process' method='post'>
+                <tr>
+                    <td>
+                        <select name="item_a_1">
+                            {% for column_1 in columns[0][1:-1] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>First Pair</td>
+                    <td>
+                        <select name="item_b_1">
+                            {% for column_1 in columns[1][1:-1] %}
+                            <option>{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_1">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="item_a_2">
+                            {% for column_1 in columns[0][1:] %}
+                            <option selected="{{ columns[0][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Second Pair</td>
+                    <td>
+                        <select name="item_b_2">
+                            {% for column_1 in columns[1][1:] %}
+                            <option selected="{{ columns[1][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_2">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="item_a_3">
+                            {% for column_1 in columns[0][1:] %}
+                            <option selected="{{ columns[0][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Third Pair</td>
+                    <td>
+                        <select name="item_b_3">
+                            {% for column_1 in columns[1][1:] %}
+                            <option selected="{{ columns[1][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_3">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="item_a_4">
+                            {% for column_1 in columns[0][1:] %}
+                            <option selected="{{ columns[0][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Fourth Pair</td>
+                    <td>
+                        <select name="item_b_4">
+                            {% for column_1 in columns[1][1:] %}
+                            <option selected="{{ columns[1][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_4">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="item_a_5">
+                            {% for column_1 in columns[0][1:] %}
+                            <option selected="{{ columns[0][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Fifth Pair</td>
+                    <td>
+                        <select name="item_b_5">
+                            {% for column_1 in columns[1][1:] %}
+                            <option selected="{{ columns[1][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_5">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="item_a_6">
+                            {% for column_1 in columns[0][1:] %}
+                            <option selected="{{ columns[0][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>Sixth Pair</td>
+                    <td>
+                        <select name="item_b_6">
+                            {% for column_1 in columns[1][1:] %}
+                            <option selected="{{ columns[1][-1] }}">{{ column_1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <select name="data_6">
+                            <option value="none">Not Listed</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <!-- <option value="state_abv">State Abbreviation</option> -->
+                            <option value="add">Full Address (Street, City, State)</option>
+                            <option value="st">Street Address (123 Grover St)</option>
+                            <option value="zip">Zip Code</option>
+                            <!-- <option value="id">Matching Reference IDs</option> -->
+                        </select>
+                    </td>
+                </tr>
+                <div class="submit">
+                    <button>Match Columns and Merge Frames</button>
+                </div>
+            </form>
+
+        </table>
+    </div>
+
+
+    <div class="shutdown">
+        <form method="post" action="/shutdown">
+            <button>End Program</button>
+        </form>
+    </div>
+</body>
+
+</html>

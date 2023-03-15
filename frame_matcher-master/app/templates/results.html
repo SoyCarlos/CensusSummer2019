@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<header>
+    <h1>Frame Matcher</h1>
+</header>
+
+<body>
+    <div class='results_'>
+        <h5>Select Columns to Keep in Result</h5>
+        <form method="post" action="/result">
+            <p>Hold Ctrl to select multiple columns.</p>
+            <select id="columns" name="columns_selected" multiple>
+                {% for column_1 in columns %}
+                <option>{{ column_1 }}</option>
+                {% endfor %}
+            </select>
+            <div class="submit">
+                <button>Save Selected Columns</button>
+            </div>
+        </form>
+        <form method="post" action="/results" class="keep">
+            <button>Keep All Columns</button>
+        </form>
+        <div class="shutdown">
+            <form method="post" action="/shutdown" class="shutdown">
+                <button>End Program</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
